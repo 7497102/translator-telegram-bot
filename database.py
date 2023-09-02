@@ -1,6 +1,6 @@
 import sqlite3
 
-database = sqlite3.connect('mybot.db')
+database = sqlite3.connect('bot.db')
 cursor = database.cursor()
 
 

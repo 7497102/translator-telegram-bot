@@ -2,7 +2,7 @@ import sqlite3
 
 
 def insert_translate_history(telegram_id, src, dest, org_text, tr_text):
-    database = sqlite3.connect('mybot.db')
+    database = sqlite3.connect('bot.db')
     cursor = database.cursor()
     cursor.execute('''
     INSERT INTO history(telegram_id, from_lang, to_lang, original_text, translated_text)
@@ -13,7 +13,7 @@ def insert_translate_history(telegram_id, src, dest, org_text, tr_text):
 
 
 def select_history(tg_id):
-    database = sqlite3.connect('mybot.db')
+    database = sqlite3.connect('bot.db')
     cursor = database.cursor()
     cursor.execute('''
     SELECT from_lang, to_lang, original_text, translated_text

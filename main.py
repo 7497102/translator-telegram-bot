@@ -5,7 +5,7 @@ from googletrans import Translator
 from telebot.types import ReplyKeyboardRemove
 from queries import insert_translate_history, select_history
 
-bot = TeleBot('5747673023:AAFBSQgDroXIkMCRZ7MO9e1hwZWvMkpNLX4')
+bot = TeleBot('Your telegram bot token')
 
 @bot.message_handler(commands=['start', 'history', 'about_dev'])
 def commands(message: Message):
